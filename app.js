@@ -21,6 +21,16 @@ function agregarAmigo() {
         return;
     }
 
+    // Convertimos el nombre a mayúsculas
+    nombre = nombre.toUpperCase();
+
+    // Verificar si ya existe en la lista
+    if (amigos.includes(nombre)) {
+        alert('Este nombre ya fue ingresado.');
+        return;
+    }
+    
+
     amigos.push(nombre);
     actualizarLista();
     inputAmigo.value = '';
